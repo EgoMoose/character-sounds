@@ -1,0 +1,21 @@
+{
+	"name": "character-sounds",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"Packages": {
+				"$path": "Packages",
+				"CharacterSounds": {
+					"$path": "src"
+				}
+			}
+		},
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"Test": {
+				"$path": "test"
+			}
+		}
+	}
+}
