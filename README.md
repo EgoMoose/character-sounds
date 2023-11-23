@@ -16,7 +16,7 @@ Creates a new sound listener
 @param performer Model? -- The character model the sounds will play on. Defaults to `director` if nil
 @return () -> (), -- callback that terminates the listener and cleans up the sounds
 --]=]
-function module.listen(director: Model, performer: Model?): AnimateController
+function module.listen(director: Model, performer: Model?): () -> ()
 ```
 
 An example of using this package to replicate the standard `RbxCharacterSounds` script can be found [here.](test/RbxCharacterSounds.client.lua)
