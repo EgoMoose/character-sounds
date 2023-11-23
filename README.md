@@ -3,8 +3,8 @@ A replacement implementation of the `RbxCharacterSounds` script that is typicall
 
 Get it here:
 
-* [Wally]()
-* [Releases]()
+* [Wally](https://wally.run/package/egomoose/character-sounds)
+* [Releases](https://github.com/EgoMoose/character-sounds/releases)
 
 ## API
 

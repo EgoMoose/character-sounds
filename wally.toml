@@ -2,7 +2,7 @@
 name = "egomoose/character-sounds"
 version = "0.1.0"
 license = "MIT"
-description = ""
+description = "https://github.com/EgoMoose/character-sounds"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
