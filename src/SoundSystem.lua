@@ -138,6 +138,7 @@ function module.initialize(instances: SoundSystemInstances)
 
 		[Enum.HumanoidStateType.Freefall] = function()
 			sounds.FreeFalling.Volume = 0
+			sounds.FreeFalling.Playing = true
 			stopPlayingLoopedSounds(sounds.FreeFalling)
 			playingLoopedSounds[sounds.FreeFalling] = true
 		end,
