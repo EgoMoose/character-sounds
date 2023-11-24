@@ -15,6 +15,7 @@ export type ManualDirector = {
 
 export type ManualHumanoid = {
 	StateChanged: ScriptSignal,
+	MoveDirection: Vector3,
 	GetState: () -> Enum.HumanoidStateType,
 }
 
@@ -28,6 +29,7 @@ function module.create(): ManualDirector
 	local currentState = Enum.HumanoidStateType.Running
 	local humanoid: ManualHumanoid = {
 		StateChanged = Signal.new(),
+		MoveDirection = Vector3.zero,
 
 		GetState = function()
 			return currentState

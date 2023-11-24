@@ -109,9 +109,14 @@ function module.manual(performer: Model)
 
 	local controller = {
 		fireState = manualDirector.fireState,
+
 		setVelocity = function(velocity: Vector3)
 			manualDirector.rootPart.AssemblyLinearVelocity = velocity
 		end,
+		setMoveDirection = function(direction: Vector3)
+			manualDirector.humanoid.MoveDirection = direction
+		end,
+
 		cleanup = function()
 			clearBinding()
 			clearSound()

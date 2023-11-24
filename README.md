@@ -28,6 +28,7 @@ Creates a new sound listener
 	cleanup: () -> (), -- stops sounds from playing and cleans them up
 	fireState: (Enum.HumanoidStateType, ...any) -> (), -- fire a humanoid state for a reactive sound transition
 	setVelocity: (Vector3) -> (), -- set the root part velocity
+	setMoveDirection: (Vector3) -> (), -- set the humanoid's move direction
 }
 --]=]
 function module.manual(performer: Model): ManualSoundController

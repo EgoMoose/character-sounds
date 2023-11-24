@@ -27,6 +27,7 @@ local function characterAdded(player: Player, character: Model)
 
 		--controller.fireState(Enum.HumanoidStateType.Climbing)
 		--controller.setVelocity(Vector3.new(0, 100, 0))
+		--controller.setMoveDirection(Vector3.new(0, 0, -1))
 
 		state.terminateSound = function()
 			controller.cleanup()
