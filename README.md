@@ -14,9 +14,23 @@ Creates a new sound listener
 
 @param director Model -- The character model used to track state for playing sounds
 @param performer Model? -- The character model the sounds will play on. Defaults to `director` if nil
-@return () -> (), -- callback that terminates the listener and cleans up the sounds
+@return SoundController: {
+	cleanup: () -> (), -- stops sounds from playing and cleans them up
+}
 --]=]
-function module.listen(director: Model, performer: Model?): () -> ()
+function module.listen(director: Model, performer: Model?): SoundController
+
+--[=[
+Creates a new sound listener
+
+@param performer Model -- The character model the sounds will play on
+@return ManualSoundController: {
+	cleanup: () -> (), -- stops sounds from playing and cleans them up
+	fireState: (Enum.HumanoidStateType, ...any) -> (), -- fire a humanoid state for a reactive sound transition
+	setVelocity: (Vector3) -> (), -- set the root part velocity
+}
+--]=]
+function module.manual(director: Model): ManualSoundController
 ```
 
 An example of using this package to replicate the standard `RbxCharacterSounds` script can be found [here.](test/RbxCharacterSounds.client.lua)

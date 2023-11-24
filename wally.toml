@@ -1,9 +1,10 @@
 [package]
 name = "egomoose/character-sounds"
-version = "0.1.0"
+version = "0.2.0"
 license = "MIT"
 description = "https://github.com/EgoMoose/character-sounds"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+Signal = "stravant/goodsignal@0.2.1"

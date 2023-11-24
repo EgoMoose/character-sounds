@@ -23,7 +23,14 @@ local function characterAdded(player: Player, character: Model)
 
 	local state = playerStates[player]
 	if state then
-		state.terminateSound = CharacterSounds.listen(character)
+		local controller = CharacterSounds.listen(character)
+
+		--controller.fireState(Enum.HumanoidStateType.Climbing)
+		--controller.setVelocity(Vector3.new(0, 100, 0))
+
+		state.terminateSound = function()
+			controller.cleanup()
+		end
 	end
 end
 

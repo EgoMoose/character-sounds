@@ -59,6 +59,10 @@ local STATE_REMAP = {
 	[Enum.HumanoidStateType.RunningNoPhysics] = Enum.HumanoidStateType.Running,
 }
 
+local module = {}
+
+-- Private
+
 local function mapNumber(x: number, inMin: number, inMax: number, outMin: number, outMax: number): number
 	local normalized = (x - inMin) / (inMax - inMin)
 	return normalized * (outMax - outMin) + outMin
@@ -69,7 +73,9 @@ local function playSound(sound: Sound)
 	sound.Playing = true
 end
 
-local function initializeSoundSystem(instances: SoundSystemInstances)
+-- Public
+
+function module.initialize(instances: SoundSystemInstances)
 	local _actorHumanoid = instances.actor.humanoid
 	local actorRootPart = instances.actor.rootPart
 	local directorHumanoid = instances.director.humanoid
@@ -177,7 +183,7 @@ local function initializeSoundSystem(instances: SoundSystemInstances)
 			sound.Playing = vel.Magnitude > 0.1
 		end,
 
-		[sounds.FreeFalling] = function(dt: number, sound: Sound, vel: Vector3): ()
+		[sounds.FreeFalling] = function(dt: number, sound: Sound, vel: Vector3)
 			if vel.Magnitude > 75 then
 				sound.Volume = math.clamp(sound.Volume + 0.9 * dt, 0, 1)
 			else
@@ -236,4 +242,6 @@ local function initializeSoundSystem(instances: SoundSystemInstances)
 	return terminate
 end
 
-return initializeSoundSystem
+--
+
+return module
