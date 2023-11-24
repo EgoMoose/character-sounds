@@ -30,7 +30,7 @@ Creates a new sound listener
 	setVelocity: (Vector3) -> (), -- set the root part velocity
 }
 --]=]
-function module.manual(director: Model): ManualSoundController
+function module.manual(performer: Model): ManualSoundController
 ```
 
 An example of using this package to replicate the standard `RbxCharacterSounds` script can be found [here.](test/RbxCharacterSounds.client.lua)
